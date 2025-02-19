@@ -14,4 +14,4 @@ This project is designed to simplify the amount of interactions with 3rd-party b
 
 
 ## Project status
-TODO - requirements.txt
+In Progress
