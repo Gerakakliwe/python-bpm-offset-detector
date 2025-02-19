@@ -8,8 +8,9 @@ This project is designed to simplify the amount of interactions with 3rd-party b
 
 ## Sources
 
-[Simple bpm counter](https://github.com/scaperot/the-BPM-detector-python/tree/master) 
-[Scientific paper regarding the idea behind this implementation](https://github.com/nathanstep55/bpm-offset-detector/blob/main/original-paper/report.pdf)
+
+- [Simple bpm counter](https://github.com/scaperot/the-BPM-detector-python/tree/master) 
+- [Scientific paper regarding the idea behind this implementation](https://github.com/nathanstep55/bpm-offset-detector/blob/main/original-paper/report.pdf)
 
 
 ## Project status
