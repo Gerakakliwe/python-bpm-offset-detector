@@ -140,6 +140,26 @@ def compute_offset_from_onsets(onset_samples, sr, interval, hamming_size=20):
     best_offset_bin = np.argmax(H_smooth)
     return best_offset_bin / sr
 
+def print_beat_info(offset, bpm):
+    """
+    Prints the full beat interval, half beat interval, and a few beat positions.
+    """
+    beat_interval = 60.0 / bpm
+    half_beat_interval = beat_interval / 2.0
+
+    print(f"Full beat interval: {beat_interval:.3f} sec")
+    print(f"Half beat interval: {half_beat_interval:.3f} sec")
+    print("Beat positions:")
+    positions = {
+        "Beat -1": offset - beat_interval,
+        "Beat -0.5": offset - half_beat_interval,
+        "Beat 0": offset,
+        "Beat 0.5": offset + half_beat_interval,
+        "Beat 1": offset + beat_interval,
+    }
+    for label, pos in positions.items():
+        print(f"  {label}: {pos:.3f} sec")
+
 
 def main(filename):
     # Read the audio file using the wave module.
@@ -177,19 +197,8 @@ def main(filename):
     interval = int(fs * 60 / bpm)
     offset = compute_offset_from_onsets(onset_samples, fs, interval, hamming_size=20)
     print(f"Estimated offset: -{offset:.3f} sec")
+    print_beat_info(offset, bpm)
 
 
 if __name__ == "__main__":
-    main("samples/aitai.wav")
-    print("----------------------------")
     main("samples/monitoring.wav")
-    print("----------------------------")
-    main("samples/neppa.wav")
-    print("----------------------------")
-    main("samples/enma.wav")
-    print("----------------------------")
-    main("samples/meltdown.wav")
-    print("----------------------------")
-    main("samples/mesmerizer.wav")
-    print("----------------------------")
-    main("samples/propose.wav")
