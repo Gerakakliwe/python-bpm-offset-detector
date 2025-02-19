@@ -112,16 +112,16 @@ def main(audio_file):
 
 
 if __name__ == "__main__":
-    main("samples/aitai.wav")
+    main("../samples/aitai.wav")
     print("----------------------------")
-    main("samples/monitoring.wav")
+    main("../samples/monitoring.wav")
     print("----------------------------")
-    main("samples/neppa.wav")
+    main("../samples/neppa.wav")
     print("----------------------------")
-    main("samples/enma.wav")
+    main("../samples/enma.wav")
     print("----------------------------")
-    main("samples/meltdown.wav")
+    main("../samples/meltdown.wav")
     print("----------------------------")
-    main("samples/mesmerizer.wav")
+    main("../samples/mesmerizer.wav")
     print("----------------------------")
-    main("samples/propose.wav")
+    main("../samples/propose.wav")
